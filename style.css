@@ -1,0 +1,49 @@
+:root {
+  --meme-size: 5vw;
+  --meme-border-size: calc(var(--meme-size) / 2);
+  --meme-container-size: calc(100vh - var(--meme-size) * 7);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+}
+.container {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+}
+.header-container {
+  height: calc((4 + 2) * var(--meme-size));
+  width: 100vw;
+  position: relative;
+}
+
+.header-container header {
+  background-color: #af2323;
+  position: absolute;
+  top: var(--meme-size);
+  bottom: var(--meme-size);
+  left: var(--meme-size);
+  right: var(--meme-size);
+  height: calc(var(--meme-size) * 5 - var(--meme-size));
+  border-radius: var(--meme-border-size);
+}
+.content-container {
+  height: calc(
+    100vh - calc(var(--meme-size) * 5 - var(--meme-size) - var(--meme-size) * 2)
+  );
+  position: relative;
+}
+.content {
+  background-color: #af2323;
+  position: absolute;
+  top: 0vw;
+  bottom: var(--meme-size);
+  left: var(--meme-size);
+  right: var(--meme-size);
+  border-radius: var(--meme-border-size);
+  height: calc(var(--meme-container-size));
+}
